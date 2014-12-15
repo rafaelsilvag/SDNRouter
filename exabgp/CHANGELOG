@@ -3,6 +3,15 @@ Version explained:
  minor : increase on risk of code breakage during a major release
  bug   : increase on bug or incremental changes
 
+Version 3.4.6
+ * Feature: JSON now includes ASN (local,peer) and IP (local,IP)
+    requested by: jtkdpu (issue #196)
+    patch by: Ryan Tinianov (pull #199) for the IP
+
+Version 3.4.5
+ * Fix: improper distribution of events to process workers
+    reported by: Tim Epkes
+
 Version 3.4.4
  * Fix: bug with IPv4 / ipv6 handling
  * Fix: better peer isolation when parsing messages
@@ -24,6 +33,13 @@ Version 3.4.4
  * Fix: do not bark if an unknown ASPath attribute is found
  * Fix: correctly accept connection on AF_INET6 socket
     patch by: John W. O'Brien
+ * Fix: restore lost python2.6 compatibility
+    reported by: Minsuk Song
+ * Fix: IPv6 MD5
+    reported by: Dave J Knight
+ * Add framework to debug SIGUSR1 related problems
+ * Fix: do not drop session when receiving an unknown capability
+    patch by: Peter van Dijk (PowerDNS)
 
 Version 3.4.3
  * Fix: JSON message increment
